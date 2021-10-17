@@ -9,7 +9,6 @@ html {
     font-style: normal;
     font-weight: 400;
     src: local(""), url("assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"), url("assets/fonts/roboto-v29-latin-regular.woff") format("woff");
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
     
 body{
@@ -33,12 +32,10 @@ section {
     padding: 40px 0;
     height: 100%;
     width: calc(100% - 80px);
-    /* max-width: 1800px; */
 }
 
 .slider-container{
     height: 100%;
-    /* background-color: crimson; */
 }
 
 
@@ -60,7 +57,6 @@ section {
 .slide1, .slide2, .slide3, .slide4{
     position: fixed;
     width: calc(100% - 80px);
-    /* max-width: 1800px; */
     height: 100%;
 }
 
@@ -98,7 +94,6 @@ section {
     border-radius: 5%;
 } 
 .slides p{
-    /* margin-left: 40px; */
     width: max-content;
     background: rgb(37, 39, 42);
     transition: 100ms ease-in-out;
@@ -108,41 +103,27 @@ section {
 }
 .slide1 {
     opacity: 1;
-    /* background: url("assets/img/1.jpg") no-repeat; */
 }
 .slide2 div{
     opacity: 0;
     background-position-x: 400px;
-    /* width: 90%; */
-    /* transform: translateX(40px); */
-    
 }
 .slide3 div{
     opacity: 0;
     background-position-x: 400px;
-    /* width: 90%; */
-    /* transform: translateX(40px); */
 }
 .slide4 div{
     opacity: 0;
     background-position-x: 400px;
-    
-    /* width: 90%; */
-    /* z-index: 0;
-    transform: translateX(40px); */
 }
 
 .slide2 p{
     opacity: 0;
-    /* background-position-x: 400px; */
-    /* width: 90%; */
     transform: translateX(400px);
-    
 }
+    
 .slide3 p{
     opacity: 0;
-    /* background-position-x: 400px; */
-    /* width: 90%; */
     transform: translateX(400px);
 }
 .slide4 p{
@@ -150,11 +131,6 @@ section {
     transform: translateX(400px); 
 }
     
-/* 
-.radio-button input:checked ~ .checkmark {
-    background-color: rgb(37, 39, 42);
-  } */
-
 #first-square:checked ~ .labels > .bullet1 > .checkmark {
     background-color: rgb(37, 39, 42);
 }
@@ -170,104 +146,60 @@ section {
 #fourth-square:checked ~ .labels > .bullet4 > .checkmark {
     background-color: rgb(37, 39, 42);
 }
-/* 
-#third-square:checked ~ .labels > .bullet3 > .checkmark:after {
-    display: block;
-}
-
-#fourth-square:checked ~ .labels > .bullet4 > .checkmark:after {
-    display: block;
-}
-
-
-#first-square:checked ~ .labels > .bullet1 > .checkmark:after {
-    display: block;
-}
-
-#second-square:checked ~ .labels > .bullet2 > .checkmark:after {
-    display: block;
-}
-
-#third-square:checked ~ .labels > .bullet3 > .checkmark:after {
-    display: block;
-} */
-
-/* #fourth-square:checked ~ .labels > .bullet4 > .checkmark:after {
-    display: block;
-} */
 
 #second-square:checked ~ .slides > .slide2 > div{
     opacity: 1;
     background-position-x: left;
-    /* transform: translateX(0px); */
-    /* width: calc(100% - 40px); */
 }
 
 #third-square:checked ~ .slides > .slide3 > div{
     opacity: 1;
     background-position-x: left;
-    /* transform: translateX(0px); */
-    /* width: calc(100% - 40px); */
-    
 }
 
 #fourth-square:checked ~ .slides > .slide4 > div{
     opacity: 1;
     background-position-x: left;
-    /* transform: translateX(0px); */
-    /* width: calc(100% - 40px); */
 }
 
 #second-square:checked ~ .slides > .slide1 > div{
     opacity: 0;
     background-position: 31800px;
-    /* transform: translateX(0px); */
-    /* width: calc(100% - 40px); */
 }
 
 #third-square:checked ~ .slides > .slide1 > div{
     opacity: 0;
     background-position-x: 31800px;
-    /* transform: translateX(0px); */
-    /* width: calc(100% - 40px); */
-    
 }
 
 #fourth-square:checked ~ .slides > .slide1 > div{
     opacity: 0;
     background-position-x: 31800px;
-    /* transform: translateX(0px); */
-    /* width: calc(100% - 40px); */
 }
 
 #second-square:checked ~ .slides > .slide2 > p{
     opacity: 1;
-    transform: translateX(0px);
-    
+    transform: translateX(0px); 
 }
 
 #third-square:checked ~ .slides > .slide3 > p{
     opacity: 1;
     transform: translateX(0px);
-    
-    
 }
 
 #fourth-square:checked ~ .slides > .slide4 > p{
     opacity: 1;
-    transform: translateX(0px);
-    
+    transform: translateX(0px); 
 }
 
 .labels{
     position: fixed;
     bottom: 85px;
-    right: 48px;
+    right: 30px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 50px;
-    
 }
 
 .bullets{
@@ -275,9 +207,7 @@ section {
     height: 50px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    
-    
+    align-items: center;  
 }
 
 .bullets:hover .checkmark{
@@ -285,32 +215,14 @@ section {
     border-color: white ;
 
 }
+
 .bullets:hover{
     cursor: url("assets/pointer/cursor1.cur"), auto;
 }
-/* 
-.bullets:active .checkmark{
-    background-color: white;
-} */
 
 .bullets:active {
     cursor: url("assets/pointer/cursor2.cur"), auto;
 }
-/* 
-.bullets .checkmark:after {
-    top: 3px;
-    left: 3px;
-    width: 7px;
-    height: 7px;
-    border-radius: 5px;
-    background: black;
-  } */
-
-
-
-
-
-
 
 .squares{
     position: fixed;
@@ -322,49 +234,36 @@ section {
     justify-content: space-between;
 }
 
+.checkmark {
+  position: absolute;
+  /* top: 4px; */
+  /* left: 0; */
+  height: 25px;
+  width: 25px;
+  background-color: rgb(127, 170, 232);
+  border-radius: 12.5px;
+  border: solid rgb(127, 170, 232);
+  border-width: 4px;
+}
 
-  
-  .checkmark {
-    position: absolute;
-    /* top: 4px; */
-    /* left: 0; */
-    height: 25px;
-    width: 25px;
-    background-color: rgb(127, 170, 232);
-    border-radius: 12.5px;
-    border: solid rgb(127, 170, 232);
-    border-width: 4px;
+@media (max-width: 768px){
+  .container{
+      padding: 15px 0;
   }
-  
-/*   
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  } */
-  
-  @media (max-width: 768px){
-    .container{
-        padding: 15px 0;
-    }
-    .labels{
-        right: calc(50% - 105px);
-        bottom: 50px;
-    }
+  .labels{
+      right: calc(50% - 105px);
+      bottom: 50px;
+  }
+  .slides p {
+      margin-top: 56px;
+      font-size: 1.2rem;
+  }
+  .images{
+      height: calc(100% - 120px);
+  }
+}
+@media (max-width: 420px){
     .slides p {
-        margin-top: 60px;
-        font-size: 1.2rem;
+        font-size: 1rem;    
     }
-    .images{
-        height: calc(100% - 120px);
-    }
-  }
-  
-  @media (orientation:landscape) and (max-width: 768px){
-
-  }
-
-
-
-
-
+}
