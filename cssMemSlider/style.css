@@ -19,7 +19,7 @@ section {
 
 .container{
     margin: 0 auto;
-    padding-top: 40px;
+    padding: 40px 0;
     height: 100%;
     width: calc(100% - 40px);
     max-width: 1800px;
@@ -28,4 +28,218 @@ section {
 .slider-container{
     height: 100%;
     background-color: crimson;
+}
+
+.slides div{
+    transition:   500ms ease-in-out;
+    background-size: cover;
+} 
+
+.slide1 {
+    opacity: 1;
+    /* background: url("assets/img/1.jpg") no-repeat; */
+}
+.slide2 {
+    opacity: 0;
+    transform: translateX(40px);
+    
+}
+.slide3 {
+    opacity: 0;
+    transform: translateX(40px);
+}
+.slide4 {
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+.radio-button input:checked ~ .checkmark {
+    background-color: white;
+  }
+
+#first-square:checked ~ .labels > .bullet1 > .checkmark {
+    background-color: white;
+}
+
+#second-square:checked ~ .labels > .bullet2 > .checkmark {
+    background-color: white;
+}
+
+#third-square:checked ~ .labels > .bullet3 > .checkmark:after {
+    display: block;
+}
+
+#fourth-square:checked ~ .labels > .bullet4 > .checkmark:after {
+    display: block;
+}
+
+
+#first-square:checked ~ .labels > .bullet1 > .checkmark:after {
+    display: block;
+}
+
+#second-square:checked ~ .labels > .bullet2 > .checkmark:after {
+    display: block;
+}
+
+#third-square:checked ~ .labels > .bullet3 > .checkmark:after {
+    display: block;
+}
+
+#fourth-square:checked ~ .labels > .bullet4 > .checkmark:after {
+    display: block;
+}
+
+#second-square:checked ~ .slides > .slide2 {
+    opacity: 1;
+    transform: translateX(0px);
+    
+}
+
+#third-square:checked ~ .slides > .slide3 {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+#fourth-square:checked ~ .slides > .slide4 {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.labels{
+    position: fixed;
+    bottom: 112px;
+    right: 70px;
+    display: inline-flex;
+    height: 30px;
+    
+}
+
+.bullets{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    
+    
+}
+
+.bullets:hover .checkmark{
+    background-color: rgb(53, 87, 161);
+
+}
+
+.bullets:active .checkmark{
+    background-color: teal;
+}
+
+.bullets:active {
+    cursor:url("assets/pointer/icon.png"),url('assets/pointer/cursor.cur'),auto;
+}
+
+.bullets .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 7px;
+    height: 7px;
+    border-radius: 5px;
+    background: black;
+  }
+
+
+
+
+
+
+
+.squares{
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    height: 10px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+  
+  .checkmark {
+    position: absolute;
+    /* top: 4px; */
+    /* left: 0; */
+    height: 17px;
+    width: 17px;
+    background-color: #eee;
+    border-radius: 8.5px;
+    border: solid black;
+    border-width: 2px;
+  }
+  
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+.slide-box{
+    height: 100%;
+}
+
+.slide-box input{
+    display: none;
+}
+
+.slides{
+    position: relative;
+    height: 100%;
+}
+
+.slide1, .slide2, .slide3, .slide4{
+    position: fixed;
+    width: calc(100% - 40px);
+    max-width: 1800px;
+    height: 100%;
+}
+
+.images{
+    
+    width: 100%;
+    height: calc(100% - 200px);
+    
+
+}
+
+.image1{
+    background: url("assets/img/1.jpg") no-repeat;
+}
+
+.image2{
+    background: url("assets/img/2.jpg") no-repeat;
+}
+
+.image3{
+    background: url("assets/img/3.jpg") no-repeat;
+}
+
+.image4{
+    background: url("assets/img/4.jpg") no-repeat;
+}
+
+img{
+    display: block;
+    width: 100%;
+    /* height: auto; */
+    /* max-height: 400px; */
+    /* size: inherit; */
 }
